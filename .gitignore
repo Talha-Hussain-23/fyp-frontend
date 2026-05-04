@@ -1,0 +1,66 @@
+# ===============================================
+# SmartHiring Frontend - Git Ignore Rules
+# ===============================================
+
+# -----------------------------------------------
+# 1. DEPENDENCIES
+# -----------------------------------------------
+node_modules/
+.pnp
+.pnp.js
+package-lock.json  # Note: Keep if using npm, ignore if using yarn exclusively
+# yarn.lock       # Note: Keep if using yarn, ignore if using npm exclusively
+
+# -----------------------------------------------
+# 2. PRODUCTION & BUILD
+# -----------------------------------------------
+build/
+dist/
+.next/
+out/
+
+# -----------------------------------------------
+# 3. ENVIRONMENT & SECRETS (CRITICAL)
+# -----------------------------------------------
+# Never ignore the example/template file!
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+# Exception: Do NOT ignore the example file
+!.env.example
+
+# -----------------------------------------------
+# 4. TESTING & COVERAGE
+# -----------------------------------------------
+coverage/
+.nyc_output/
+junit.xml
+
+# -----------------------------------------------
+# 5. LOGS & DIAGNOSTICS
+# -----------------------------------------------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# -----------------------------------------------
+# 6. IDE & EDITOR FILES
+# -----------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.editorconfig  # Usually committed, but ignore if local only
+
+# -----------------------------------------------
+# 7. OPERATING SYSTEM FILES
+# -----------------------------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini

@@ -1,0 +1,124 @@
+.section-config-card {
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.section-config-card.enabled {
+  border-color: #10b981;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.1);
+}
+
+.section-config-card.disabled {
+  background: #f9fafb;
+  opacity: 0.7;
+}
+
+.section-header {
+  margin-bottom: 16px;
+}
+
+.section-title-area {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.section-title-area input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  cursor: pointer;
+  accent-color: #10b981;
+}
+
+.section-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.section-icon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.section-info h4 {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.section-description {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.section-config-body {
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.config-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.config-row:last-child {
+  margin-bottom: 0;
+}
+
+.config-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.config-field label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.config-field input[type="number"],
+.config-field select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.config-field input[type="number"]:focus,
+.config-field select:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.config-field input[type="number"]:disabled,
+.config-field select:disabled {
+  background: #f3f4f6;
+  cursor: not-allowed;
+}
+
+.help-text {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .config-row {
+    grid-template-columns: 1fr;
+  }
+}
